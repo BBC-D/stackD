@@ -1,3 +1,4 @@
+
 var express = require('express');
 var pg = require('../db/knex');
 var router = express.Router();
@@ -6,6 +7,7 @@ var router = express.Router();
 router.get('/signup', function(req, res) {
   res.render('signup');
 });
+
 router.post('/signup',function(req, res) {
   console.log(req.body);
   var info = req.body;
@@ -13,5 +15,10 @@ router.post('/signup',function(req, res) {
     res.redirect('/');
   })
 } )
+
+
+
+
+
 
 module.exports = router;

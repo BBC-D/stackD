@@ -1,9 +1,25 @@
 * {
   box-sizing: border-box;
+  font-family: 'Source Code Pro', monospace;
 }
 
 body {
   margin:auto;
+
+  background-color: black;
+  background-image: url('../images/coding-bg1.jpg');
+  background-size: cover;
+}
+
+.nav-image {
+  height: 4em;
+  margin: .5%;
+  margin-left: 1%;
+}
+
+nav {
+  background-color: black;
+
 }
 
 .project-title:hover {
@@ -18,15 +34,15 @@ body {
   cursor: pointer;
 }
 
-.index-page-wrapper {
+.index-page-wrapper, .signup-page-wrapper{
   width:100%;
   height:100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  background-image: url('../images/coding-bg1.jpg');
   background-size: auto;
+
 }
 
 .logo-wrapper {
@@ -57,14 +73,14 @@ body {
   color: white;
   height:5vh;
   font-size: 1.5em;
-  background-color: rgba(34,139,34,.7);
+  background-color: rgba(34,139,34,.4);
   text-align: center;
   vertical-align: middle;
 
 }
 
 .blue {
-  background-color:rgba(0,192,192,0.7);
+  background-color:rgba(0,192,192,0.4);
 }
 
 .login-wrapper {
@@ -115,8 +131,6 @@ body {
   justify-content: center;
   flex-wrap:wrap;
   margin:auto;
-  background-image: url('../images/coding-bg1.jpg');
-  background-size: auto;
 }
 
 .profile-bio-wrapper {
@@ -126,7 +140,7 @@ body {
   align-items: center;
   border: 2px solid black;
   margin-top: auto;
-  background-color: rgba(45,45,45, 0.6);
+  background-color: rgba(45,45,45, 0.9);
   color: white;
 }
 
@@ -193,13 +207,15 @@ body {
   border: 2px solid black;
   padding:10px;
   border-radius:20px;
-  background-color:rgba(34,139,34,.7);
+  background-color:rgba(0, 204, 68, .8);
   text-align: center;
   color: white;
   text-decoration: none;
   width: 30vw;
   text-align: center;
   margin-top:5%;
+  align-self: center;
+  margin-top:18%;
 }
 
 .project-wrapper {
@@ -212,10 +228,17 @@ body {
 .project {
   margin:2%;
   border: 2px solid black;
-  display: flex;justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 25%;
-  height: 12vh;
-  background-color: lightgrey;
+  height: 15em;
+  background-color: rgba(0, 143, 179, .9);
+}
+
+.project-content {
+  color: white;
+  font-size: auto;
 }
 
 a {
@@ -229,7 +252,6 @@ a {
   flex-wrap: wrap;
   width: 100%;
   text-align: center;
-  background-image: url('../images/coding-bg1.jpg');
   background-size: auto;
 }
 
@@ -293,7 +315,6 @@ a {
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
-  background-image: url('../images/coding-bg1.jpg');
   background-size: auto;
   background-repeat: no-repeat;
   margin: auto;
@@ -412,7 +433,6 @@ a {
   align-items: flex-start;
   flex-wrap:wrap;
   width: 100%;
-  background-image: url('../images/coding-bg1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -599,11 +619,6 @@ a {
     height: 100%;
   }
 
-  .new-project-button {
-    align-self: center;
-    margin-top:18%;
-  }
-
   .bouton {
     width: 100%;
     margin: 5.5%;
@@ -623,5 +638,16 @@ a {
 @media(max-width:1000px) {
   .newproject-question {
     margin-top:4%;
+  }
+}
+
+@media(max-width: 420px) {
+  .project-wrapper {
+    flex-direction: column;
+  }
+
+  .project {
+    width: 95.5%;
+    margin-top: 5%;
   }
 }

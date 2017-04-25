@@ -1,10 +1,11 @@
+
 var express = require('express');
 var pg = require('../db/knex');
 var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
 });
 router.post('/', (req, res) =>{
   var user = req.body;
