@@ -5,7 +5,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/signup', function(req, res) {
-  res.render('signup', {layout: 'layout.hbs'});
+  res.render('signup');
 });
 
 router.post('/signup',function(req, res) {
